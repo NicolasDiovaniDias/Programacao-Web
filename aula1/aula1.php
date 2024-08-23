@@ -27,4 +27,22 @@
         "signo" => "leão"
     );
     print_r($nicolas);
-?>
+    echo "<hr>";
+    $alunos = array(
+        "nicolas" => [
+            "nome" => "nicolas",
+            "idade" => "18",
+            "cursos" => ["ads","pmm"]
+        ],
+        "gabriel" => [
+            "nome" => "gabriel",
+            "idade" => "19",
+            "cursos" => ["ads","moda"]
+        ]
+        );
+        echo "<pre>";
+        print_r($alunos);
+        echo "</pre>";
+        echo "<hr>";
+        echo ($alunos["nicolas"]["nome"])
+        ?>
