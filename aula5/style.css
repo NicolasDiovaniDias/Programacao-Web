@@ -1,0 +1,58 @@
+body{
+    margin: 0;
+    font-family: arial, sans-serif;
+}
+.topo{
+    text-align: center;
+}
+.menu{
+    background-color: rgb(255, 255, 60);
+}
+.menu ul{
+    padding: 0;
+    list-style: none;
+    margin-bottom: 0;
+}
+.menu li{
+    display: inline-block;
+    padding: 10px 20px;
+}
+.menu li:hover{
+    background-color: white;
+    box-shadow: inset 0px 0px 8px #333;
+}
+.menu li a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    text-shadow: 1px 1px 3px rgb(255, 255, 255);
+}
+.banner{
+    background-color: #578747;
+}
+.banner h2{
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 4px;
+    padding: 40px 10px;
+    margin-top:0;
+}
+.principal{
+    max-width: 1024px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.info{
+    width: 75%;
+    float: left;
+    box-sizing: border-box;
+}
+.lateral{
+    width: 25%;
+    float: right;
+    box-sizing: border-box;
+    padding: 25px;
+}
+.rodape{
+    text-align: center;
+    padding: 40px 10px;
+}
