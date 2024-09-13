@@ -21,7 +21,7 @@
     </header>
     <main class="principal">
         <div class="info">
-            <h1>bem vindo</h1>
+            <h1>empresa</h1>
             <?php 
             require_once "layout/banner.php";
             ?>
