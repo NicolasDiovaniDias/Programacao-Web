@@ -68,7 +68,7 @@ print_r($results);
             $senha = $_POST['senha'];
             $obs=filter_input(INPUT_POST, "obs", FILTER_SANITIZE_FULL_SPECIAL_CHARS);
             //comando que vai ser disparado no banco de dados
-            $query = "ISERT INTO usuarios(nome,obs,email, senha,data_cadastro) VALUES($nome,$email,$senha,$obs,NOW())";
+            $query = "INSERT INTO usuarios(nome,obs,email, senha,data_cadastro) VALUES('$nome','$email','$senha','$obs',NOW())";
             $action = mysqli_query($connect,$query);
 
         }
