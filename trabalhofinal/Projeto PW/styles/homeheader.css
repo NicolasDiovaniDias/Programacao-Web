@@ -1,0 +1,61 @@
+/* Cor Principal (Verde Escuro): #1E3A3A
+Cor Secundária (Azul Claro): #3498DB
+Cor de Acento (Amarelo Dourado): #F39C12
+Cor Neutra (Cinza Claro): #BDC3C7
+Cor de Fundo (Branco Claro): #ECF0F1 */
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    height: 400px;
+    width: 100%;
+    background-image: url("../imagens/banner.jpg");
+    background-size: cover;
+    box-shadow: 0 0 0.5vw 0.1vw rgba(0, 0, 0, 0.750);
+}
+header nav{
+    height: 18.75%;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 1vw;
+}
+header nav img{
+    height: 70%;
+    margin: 0.5vw 0.5vw;
+}
+header nav ul{
+    height: 100%;
+    width: 60%;
+    list-style-type: none;
+    float: right;
+}
+header nav ul a{
+    height: 100%;
+    float: right;
+    padding: 0 4vh;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: whitesmoke;
+}
+header nav ul a:hover{
+    transition: 0.5s;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 2px 2px black;
+}
+header nav ul li{
+    margin: 0 auto;
+}
+header #header-bottom{
+    height: 81.25%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header #header-bottom h1{
+    color: whitesmoke;
+}
+header #header-bottom h1 strong{
+    color: #F39C12;
+}

@@ -1,0 +1,66 @@
+body{
+    height: calc(100% - 75px);
+    width: 100%;
+    background: 
+        linear-gradient(to left, rgba(255, 0, 0, 0),#F39C12),
+        url('../imagens/banner.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-blend-mode: multiply;
+}
+body section{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.500);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+body section #login{
+    height: 35vw;
+    border-radius: 1vw;
+    width: 25vw;
+    background-color:#bdc3c700;
+    text-align: center;
+}
+body section #login h1{
+    color:#F39C12;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30%;
+    font-size: 8vw;
+}
+body section #login form{
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: space-evenly;
+}
+body section #login form input{
+    height: 3vw;
+    border-radius: 0.5vw;
+    width: 80%;
+    font-size: 1vw;
+    color: white;
+}
+body section #login form input[type="email"],input[type="password"]{
+    background-color: rgba(255, 255, 255, 0);
+    border: solid white;
+    outline: none;
+    padding-left: 1vw;
+}
+body section #login form input[type="submit"]{
+    width:50%;
+    height: 2.5vw;
+    border: none;
+    color: #1E3A3A;
+}
+body section #login form input[type="submit"]:hover{
+    width:50%;
+    height: 2.5vw;
+    color: whitesmoke;
+    background-color: #1E3A3A;
+}

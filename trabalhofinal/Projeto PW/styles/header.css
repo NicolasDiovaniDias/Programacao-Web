@@ -1,0 +1,36 @@
+header{
+    height: 75px;
+    width: 100%;
+    background-size: cover;
+}
+header nav{
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 1vw;
+}
+header nav img{
+    height: 70%;
+    margin: 0.5vw 0.5vw;
+}
+header nav ul{
+    height: 100%;
+    width: 60%;
+    list-style-type: none;
+    float: right;
+}
+header nav ul a{
+    height: 100%;
+    float: right;
+    padding: 0 4vh;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: whitesmoke;
+}
+header nav ul a:hover{
+    transition: 0.5s;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+header nav ul li{
+    margin: 0 auto;
+}
