@@ -11,7 +11,7 @@ function login($conexao){
 
         $senha_secreta = sha1($senha);
 
-        $query = "SELECT email,senha FROM clientes WHERE email = ?";
+        $query = "SELECT email, senha, id_clientes FROM clientes WHERE email = ?";
 
         $stmt = mysqli_prepare($conexao, $query);
 
@@ -23,22 +23,34 @@ function login($conexao){
 
         $row = mysqli_fetch_assoc($result);
 
-        if($row['email']==$email && $row['senha']==$senha_secreta){
+        if($row == null){
+            echo "senha ou email invalidos! ";
 
-            echo "usuario ja cadastrado!";
-
-            header("Refresh: 3; url=../home.php");
-
-            echo "Você será redirecionado em 3 segundos...";
-            
+            voltar();
         }
         else{
-            echo "senha ou email errados! ";
+            if($senha_secreta==$row['senha']){
+                echo "senha correta";
+
+                echo "logado";
+
+                voltar();
+    
+            }
+            else{
+                echo "senha incorreta";
+                voltar();
+            }
         }
     }
     else{
         echo "preecha todos os campos!";
+        voltar();
     }
+}
+function voltar(){
+    header("Refresh: 3; url=../login.php");    
+    echo "Você será redirecionado em 3 segundos...";
 }
 login($conexao);#aqui a função login pega a variavel conexao de dentro de _conexao.php que ta no include la de cima
 mysqli_close($conexao);

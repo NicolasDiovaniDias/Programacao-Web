@@ -38,15 +38,23 @@ function login($conexao){
             }
             else{
                 echo "erro ao cadastrar";
+                voltar();
             }
         }
         else{
             echo "preecha todos os campos!";
+            voltar();
         }
     }
     else{
         echo "senhas diferentes!";
+        voltar();
     }
+}
+function voltar(){
+    header("Refresh: 3; url=../registro.php");
+    
+    echo "Você será redirecionado em 3 segundos...";
 }
 login($conexao);#aqui a função login pega a variavel conexao de dentro de _conexao.php que ta no include la de cima
 mysqli_close($conexao);

@@ -64,3 +64,6 @@ body section #login form input[type="submit"]:hover{
     color: whitesmoke;
     background-color: #1E3A3A;
 }
+#adm{
+text-decoration: none;
+}

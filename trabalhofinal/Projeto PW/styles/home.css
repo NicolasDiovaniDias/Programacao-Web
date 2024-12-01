@@ -1,0 +1,102 @@
+/* Cor Principal (Verde Escuro): #1E3A3A
+Cor Secundária (Azul Claro): #3498DB
+Cor de Acento (Amarelo Dourado): #F39C12
+Cor Neutra (Cinza Claro): #BDC3C7
+Cor de Fundo (Branco Claro): #ECF0F1 */
+body{
+    height: auto;
+    width: 100%;
+}
+#barra_produtos{
+    height:7vw;
+    width: 80%;
+    margin-left: 10%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 0.1vw solid rgba(0, 0, 0, 0.491) ;
+}
+#barra_produtos div{
+    padding:2.5vw 0 2.5vw 5vw;
+}
+#barra_produtos a{
+    height: 2vw;
+    width: 2vw;
+    border-radius: 0.5vw;
+    text-decoration: none;
+    border: 0.2vw solid rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:2.5vw 0 0 0;
+}
+#barra_produtos a:hover{
+    transition: 0.5s;
+    transform: rotate(-360deg);
+    border-radius: 100%;
+}
+#barra_produtos a img{
+    height: 80%;
+    width: 80%;
+    margin:10% 10%;
+}
+#artc_produtos{
+    margin-top: 3vw;
+    width: 80%;
+    margin-left: 10%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 2.5vw;
+    justify-content: center;
+}
+#artc_produtos .produtos{
+    height: 400px;
+    width: 350px;
+    border-radius: 10px;
+}
+#artc_produtos .produtos:hover{
+    transform: scale(1.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* box-shadow: 0 0 7px 7px rgba(0, 0, 0, 0.5);  */
+}
+#artc_produtos .produtos img {
+    width: 100%;
+    height: 55%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+#artc_produtos .produtos div{
+    height: 45%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+#artc_produtos .produtos .descricao{
+    color: #1E3A3A;
+    margin-left:5px;
+    font-size: 10px;
+}
+#artc_produtos .produtos h1{
+    color: #000000;
+    margin-left:5px;
+}
+#artc_produtos .produtos h1 strong{
+    color: #1E3A3A;
+    font-size:15px;
+}
+#artc_produtos .produtos h3{
+    color: #1E3A3A;
+    font-size:15px;
+    margin-left:5px;
+}
+#artc_produtos .produtos h3 strong{
+    color: #1E3A3A;
+    font-size:10px;
+}
+#artc_produtos .produtos .minus{
+    color: #1E3A3A;
+    font-size:12.5px;
+    margin-left:5px;
+}
