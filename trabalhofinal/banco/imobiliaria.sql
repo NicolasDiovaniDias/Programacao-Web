@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 04/12/2024 às 20:33
+-- Tempo de geração: 04/12/2024 às 20:35
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -20,6 +20,33 @@ SET time_zone = "+00:00";
 --
 -- Banco de dados: `imobiliaria`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `clientes`
+--
+
+CREATE TABLE `clientes` (
+  `id_clientes` int(11) NOT NULL,
+  `nome` varchar(200) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `telefone` varchar(16) NOT NULL,
+  `senha` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Despejando dados para a tabela `clientes`
+--
+
+INSERT INTO `clientes` (`id_clientes`, `nome`, `email`, `telefone`, `senha`) VALUES
+(38, 'NICOLAS DIOVANI OLIVEIRA DIAS', 'nick.oliv.dias@gmail.com', '1234', '7110eda4d09e062aa5e4a390b0a572ac0d2c0220'),
+(39, 'NICOLAS DIOVANI OLIVEIRA DIAS', 'joaocarbonera06@gmail.com', '1234', '7110eda4d09e062aa5e4a390b0a572ac0d2c0220'),
+(40, 'willian', 'willian@gmail.com', '5198112312', 'b24c3a95aef4abca5de6d94a3f152718a6db0501'),
+(41, 'pedro', 'pedro@gmail.com', '984109830', '40bd001563085fc35165329ea1ff5c5ecbdbbeef'),
+(42, 'leo pozzi', 'Leo@gmail.com', '51982312312', '4f8e18471208b0bb5a6fa2a550ee5e649f75be58'),
+(43, 'antonio', 'joao@gmail.com', '981244123', '4f8e18471208b0bb5a6fa2a550ee5e649f75be58'),
+(44, 'nicolas', 'nicolasdiovanioliveira@gmail.com', '984109830', '7751a23fa55170a57e90374df13a3ab78efe0e99');
 
 -- --------------------------------------------------------
 
@@ -55,6 +82,12 @@ INSERT INTO `produtos` (`id_produtos`, `descricao`, `preco_total`, `preco_alugue
 --
 
 --
+-- Índices de tabela `clientes`
+--
+ALTER TABLE `clientes`
+  ADD PRIMARY KEY (`id_clientes`);
+
+--
 -- Índices de tabela `produtos`
 --
 ALTER TABLE `produtos`
@@ -63,6 +96,12 @@ ALTER TABLE `produtos`
 --
 -- AUTO_INCREMENT para tabelas despejadas
 --
+
+--
+-- AUTO_INCREMENT de tabela `clientes`
+--
+ALTER TABLE `clientes`
+  MODIFY `id_clientes` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 
 --
 -- AUTO_INCREMENT de tabela `produtos`
