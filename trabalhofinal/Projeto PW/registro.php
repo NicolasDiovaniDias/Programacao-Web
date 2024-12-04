@@ -7,7 +7,8 @@
         include_once "_includes/_header.html";
     ?>
     <body>
-        <section>
+        <main>
+        <article>
             <div id="registro">
                 <h1>SING UP</h1>
                 <form method="post" action="_includes/_backregistro.php">
@@ -19,9 +20,8 @@
                     <input type="submit" value="registrar-se" name="registrar">
                 </form>
             </div>
-        </section>
-        
+        </article>
+        </main>
     </body>
-    
 </body>
 </html>

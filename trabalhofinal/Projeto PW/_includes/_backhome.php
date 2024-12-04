@@ -3,9 +3,9 @@ include_once "_conexao.php";
 session_start();
 for($i =0; $i<$qnt;$i++){
 ?>
+<a href="produto.php?id=<?php echo $lista[$i]['id_produtos']; ?>">
 <div class="produtos">
-    <a href="#"></a>
-    <img src="imagens/banner.jpg" alt="">
+    <img src="<?php echo $lista[$i]['foto_caminho'];?>" alt="">
     <div>
         <p class="descricao"><?php
         echo $lista[$i]['descricao'];
@@ -24,6 +24,7 @@ for($i =0; $i<$qnt;$i++){
         ?> quartos</p>
     </div>
 </div>
+</a>
 <?php
 }
 mysqli_close($conexao);

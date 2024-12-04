@@ -7,8 +7,13 @@ body{
     height: auto;
     width: 100%;
 }
+main{
+    height: auto;
+    margin-bottom: 7.5vh;
+    width: 100%;
+}
 #barra_produtos{
-    height:7vw;
+    height:auto;
     width: 80%;
     margin-left: 10%;
     display: flex;
@@ -50,53 +55,62 @@ body{
     gap: 2.5vw;
     justify-content: center;
 }
-#artc_produtos .produtos{
+#artc_produtos a{
+    text-decoration: none;
+}
+#artc_produtos a .produtos{
     height: 400px;
     width: 350px;
     border-radius: 10px;
 }
-#artc_produtos .produtos:hover{
+#artc_produtos a .produtos:hover{
     transform: scale(1.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     /* box-shadow: 0 0 7px 7px rgba(0, 0, 0, 0.5);  */
 }
-#artc_produtos .produtos img {
+#artc_produtos a .produtos img {
     width: 100%;
     height: 55%;
     object-fit: cover;
     border-radius: 10px;
 }
-#artc_produtos .produtos div{
+#artc_produtos a .produtos div{
     height: 45%;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
 }
-#artc_produtos .produtos .descricao{
+#artc_produtos a .produtos .descricao{
     color: #1E3A3A;
     margin-left:5px;
     font-size: 10px;
 }
-#artc_produtos .produtos h1{
+#artc_produtos a .produtos h1{
     color: #000000;
     margin-left:5px;
 }
-#artc_produtos .produtos h1 strong{
+#artc_produtos a .produtos h1 strong{
     color: #1E3A3A;
     font-size:15px;
 }
-#artc_produtos .produtos h3{
+#artc_produtos a .produtos h3{
     color: #1E3A3A;
     font-size:15px;
     margin-left:5px;
 }
-#artc_produtos .produtos h3 strong{
+#artc_produtos a .produtos h3 strong{
     color: #1E3A3A;
     font-size:10px;
 }
-#artc_produtos .produtos .minus{
+#artc_produtos a .produtos .minus{
     color: #1E3A3A;
     font-size:12.5px;
     margin-left:5px;
+}
+#artc_produtos a .produtos .botao{
+    position: relative;
+    height: 10%;
+    width: 30%;
+    float: right;
 }

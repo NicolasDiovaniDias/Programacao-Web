@@ -6,7 +6,7 @@
     <?php
         include_once "_includes/_header.html";
     ?>
-    <section>
+    <article>
         <div id="login">
             <h1>LOGIN</h1>
             <form method="post"action="_includes/_backlogin.php">
@@ -15,6 +15,6 @@
                 <input type="submit" value="LOGAR" name="logar">
             </form>
         </div>
-    </section>
+    </article>
 </body>
 </html>
