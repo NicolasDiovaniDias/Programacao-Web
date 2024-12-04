@@ -34,6 +34,7 @@ article #metros{
 }
 article button{
     width:30%;
+    font-size: large;
     margin-left: 35%;
     height: 2.5vw;
     border: none;
