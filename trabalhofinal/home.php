@@ -3,7 +3,7 @@
     include_once "_includes/_head.html";
 ?>
 <?php
-    include_once "_includes/_homeheader.html";
+    include_once "_includes/_homeheader.php";
     include_once "_includes/_conexao.php";
 ?>
 <body>

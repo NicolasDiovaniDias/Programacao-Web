@@ -1,5 +1,4 @@
 <?php
-session_start();
 include_once "_conexao.php";
 function login($conexao){
     if($_POST['senha']==$_POST['senha_2']){
@@ -27,13 +26,14 @@ function login($conexao){
 
             $row = mysqli_fetch_assoc($result); //coloca em uma lista com o nome dos parametros
             if($row != null){
-                echo "usuario ja cadastrado!";
+                echo "usuario ja cadastrado!\n";
+                voltar();
                 return;
             }
             $sql="INSERT INTO clientes (nome, email, telefone, senha) VALUES ('$nome','$email','$telefone','$senha_secreta')";
 
             if(mysqli_query($conexao,$sql)){
-                echo "$nome cadastrado com sucesso";
+                header("Refresh: 0; url=../home.php");
             }
             else{
                 echo "erro ao cadastrar";

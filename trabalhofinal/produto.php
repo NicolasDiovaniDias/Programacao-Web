@@ -4,7 +4,7 @@
 ?>
 <body>
     <?php
-        include_once "_includes/_header.html";
+        include_once "_includes/_header.php";
     ?>
     <main>
         <?php
@@ -29,9 +29,9 @@
             <p id="preco_total">R$<?php echo $produtos['preco_total'];?> total</p>
             <p id="preco_aluguel">R$<?php echo $produtos['preco_aluguel'];?> aluguel</p>
             <p id="metros"><?php echo $produtos['metros'];?>²m</p>
-            <p id="quartos"><?php echo $produtos['quartos'];?>quartos</p> 
+            <p id="quartos"><?php echo $produtos['quartos'];?> quartos</p> 
+            <p id="endereco"><?php echo $produtos['endereco'];?></p>
             <button>
-                alugar
             </button>
         </article>
     </main>

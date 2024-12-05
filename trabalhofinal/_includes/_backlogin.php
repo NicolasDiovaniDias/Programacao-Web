@@ -1,5 +1,4 @@
 <?php
-session_start();
 include_once "_conexao.php";
 $senha = $_POST['senha'];
 function login($conexao){
@@ -30,27 +29,26 @@ function login($conexao){
         }
         else{
             if($senha_secreta==$row['senha']){
-                echo "senha correta";
-
-                echo "logado";
-
-                voltar();
-    
+                session_set_cookie_params(['httponly'=>True]);
+                session_start();
+                $_SESSION['id_logado']=$row["id_clientes"];
+                $pagina = "home.php";
+                voltar($pagina);
             }
             else{
-                echo "senha incorreta";
-                voltar();
+                $pagina="login.php";
+                voltar($pagina);
             }
         }
     }
     else{
         echo "preecha todos os campos!";
-        voltar();
+        $pagina="login.php";
+        voltar($pagina);
     }
 }
-function voltar(){
-    header("Refresh: 3; url=../login.php");    
-    echo "Você será redirecionado em 3 segundos...";
+function voltar($pagina){
+    header("Refresh: 0; url=../$pagina");
 }
 login($conexao);#aqui a função login pega a variavel conexao de dentro de _conexao.php que ta no include la de cima
 mysqli_close($conexao);

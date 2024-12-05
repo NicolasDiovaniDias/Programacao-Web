@@ -1,5 +1,4 @@
 <?php
-session_start();
 include_once "_conexao.php";
 function enviar($conexao){
     $descricao = filter_input(INPUT_POST, 'descricao', FILTER_SANITIZE_STRING);
@@ -13,7 +12,6 @@ function enviar($conexao){
         if($foto['size']> 2097152){
             die("arquivo muito grande MAX=2mb");
         }
-        var_dump($_FILES['foto']);
         $pasta="arquivos/"; 
         $nomedoarquivo = $foto['name'];
         $novonome = uniqid();
@@ -28,7 +26,7 @@ function enviar($conexao){
             $salvar_foto = move_uploaded_file($foto["tmp_name"],$path_salvar);
             $sql="INSERT INTO produtos (descricao, preco_total, preco_aluguel, metros, quartos, endereco, foto_caminho, foto_nome) VALUES ('$descricao','$preco_total','$preco_aluguel','$metros', '$quartos', '$endereco', '$path', '$nomedoarquivo')";
             if(mysqli_query($conexao,$sql)){
-            echo "imóvel cadastrado com sucesso";
+                header("Refresh: 0; url=../home.php");
             }
             else{
                 echo "erro ao cadastrar";

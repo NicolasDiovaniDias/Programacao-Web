@@ -1,7 +1,9 @@
 header{
     height: 75px;
     width: 100%;
+    /* background-image: url("../imagens/banner.jpg");
     background-size: cover;
+    box-shadow: 0 0 0.5vw 0.1vw rgba(0, 0, 0, 0.750); */
 }
 header nav{
     height: 100%;

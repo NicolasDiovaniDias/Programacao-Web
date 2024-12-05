@@ -4,7 +4,7 @@
 ?>
 <body>
     <?php
-        include_once "_includes/_header.html";
+        include_once "_includes/_header.php";
     ?>
     <main>
         <article>
