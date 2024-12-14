@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 04/12/2024 às 20:35
+-- Tempo de geração: 14/12/2024 às 21:21
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -40,13 +40,7 @@ CREATE TABLE `clientes` (
 --
 
 INSERT INTO `clientes` (`id_clientes`, `nome`, `email`, `telefone`, `senha`) VALUES
-(38, 'NICOLAS DIOVANI OLIVEIRA DIAS', 'nick.oliv.dias@gmail.com', '1234', '7110eda4d09e062aa5e4a390b0a572ac0d2c0220'),
-(39, 'NICOLAS DIOVANI OLIVEIRA DIAS', 'joaocarbonera06@gmail.com', '1234', '7110eda4d09e062aa5e4a390b0a572ac0d2c0220'),
-(40, 'willian', 'willian@gmail.com', '5198112312', 'b24c3a95aef4abca5de6d94a3f152718a6db0501'),
-(41, 'pedro', 'pedro@gmail.com', '984109830', '40bd001563085fc35165329ea1ff5c5ecbdbbeef'),
-(42, 'leo pozzi', 'Leo@gmail.com', '51982312312', '4f8e18471208b0bb5a6fa2a550ee5e649f75be58'),
-(43, 'antonio', 'joao@gmail.com', '981244123', '4f8e18471208b0bb5a6fa2a550ee5e649f75be58'),
-(44, 'nicolas', 'nicolasdiovanioliveira@gmail.com', '984109830', '7751a23fa55170a57e90374df13a3ab78efe0e99');
+(50, 'nicolas diovani oliveira dias', 'nicolas@gmail.com', '984109830', '40bd001563085fc35165329ea1ff5c5ecbdbbeef');
 
 -- --------------------------------------------------------
 
@@ -59,23 +53,30 @@ CREATE TABLE `produtos` (
   `descricao` varchar(100) NOT NULL,
   `preco_total` float NOT NULL,
   `preco_aluguel` float NOT NULL,
-  `metros` int(5) NOT NULL,
+  `metros` float NOT NULL,
   `quartos` int(3) NOT NULL,
   `endereco` varchar(100) NOT NULL,
   `data_envio` date NOT NULL DEFAULT current_timestamp(),
   `foto_caminho` varchar(100) NOT NULL,
-  `foto_nome` varchar(100) NOT NULL
+  `foto_nome` varchar(100) NOT NULL,
+  `fk_cliente` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Despejando dados para a tabela `produtos`
 --
 
-INSERT INTO `produtos` (`id_produtos`, `descricao`, `preco_total`, `preco_aluguel`, `metros`, `quartos`, `endereco`, `data_envio`, `foto_caminho`, `foto_nome`) VALUES
-(16, 'casa abacaxi bem localizada, perto de uma hamburgueria', 100, 50, 20, 1, '124 Rua da Concha', '2024-12-04', 'arquivos/67507f579b5e6.webp', 'casa_bob_esponja.webp'),
-(17, 'casa pedra, bem localizada, perto de uma hamburgueria', 50, 25, 10, 2, '114 Rua da Concha', '2024-12-04', 'arquivos/67507feb92eb1.png', 'imagem_2024-12-04_131433567.png'),
-(18, 'casa rustica, para os que gostam de ficar perto da natureza', 200, 150, 15, 2, 'meio do mato, 582', '2024-12-04', 'arquivos/6750807818c4c.jpg', 'hobbit_invitingnz-2b4c7e60.jpg'),
-(19, 'casa monstro super ambientada, linda e mobiliada', 1000, 800, 50, 3, 'inferno 666', '2024-12-04', 'arquivos/67508d9407c73.png', 'imagem_2024-12-04_141249987.png');
+INSERT INTO `produtos` (`id_produtos`, `descricao`, `preco_total`, `preco_aluguel`, `metros`, `quartos`, `endereco`, `data_envio`, `foto_caminho`, `foto_nome`, `fk_cliente`) VALUES
+(17, 'casa pedra, bem localizada, perto de uma hamburgueria', 50, 25, 10, 2, '114 Rua da Concha', '2024-12-04', 'arquivos/67507feb92eb1.png', 'imagem_2024-12-04_131433567.png', NULL),
+(18, 'casa rustica, para os que gostam de ficar perto da natureza', 200, 150, 15, 2, 'meio do mato, 582', '2024-12-04', 'arquivos/6750807818c4c.jpg', 'hobbit_invitingnz-2b4c7e60.jpg', NULL),
+(19, 'casa monstro super ambientada, linda e mobiliada', 1000, 800, 50, 3, 'inferno 666', '2024-12-04', 'arquivos/67508d9407c73.png', 'imagem_2024-12-04_141249987.png', NULL),
+(21, 'casa muito humilde, pra gente minimalista', 10, 5, 5, 1, 'meio do nada, 1200', '2024-12-04', 'arquivos/6750d6cce8862.png', 'imagem_2024-12-04_192458916.png', NULL),
+(22, 'abacaxi super confortavel e dinamico, perfeito para alguem animado', 1200, 1500, 30, 2, '124 Rua da Concha', '2024-12-04', 'arquivos/6750ee8806410.webp', 'casa_bob_esponja.webp', NULL),
+(24, 'casa dos teletubbies pra quem gosta de teletubbies', 2500, 2000, 50, 5, 'sol bebe feliz, 564', '2024-12-04', 'arquivos/675107947adb9.png', 'imagem_2024-12-04_225321198.png', NULL),
+(28, 'um lugar mais reservado, para pessoas sombrias que amam umidade', 5000, 6000, 250, 5, 'gothan city 5001', '2024-12-14', 'arquivos/675dde5db1225.jpeg', 'bat caverna.jpeg', NULL),
+(30, 'super casa em uma ilha pra quem quer se isolar um pouco', 3000, 1500, 40, 3, 'meio do mar, 582', '2024-12-14', 'arquivos/675de6af8cb6a.webp', 'KAME HOUSE.webp', NULL),
+(31, 'casa muito linda do nicolas diovani oliveira dias', 10000, 8000, 300, 25, 'av nestor jardim filho 582', '2024-12-14', 'arquivos/675de721911bb.png', 'imagem_2024-12-14_171424859.png', NULL),
+(32, 'casa muito cara pra quem é muito rico', 999999, 800000, 1000000, 50, 'av dinheiro, n 999', '2024-12-14', 'arquivos/675de79926f39.png', 'imagem_2024-12-14_171619467.png', NULL);
 
 --
 -- Índices para tabelas despejadas
@@ -91,7 +92,8 @@ ALTER TABLE `clientes`
 -- Índices de tabela `produtos`
 --
 ALTER TABLE `produtos`
-  ADD PRIMARY KEY (`id_produtos`);
+  ADD PRIMARY KEY (`id_produtos`),
+  ADD KEY `fk_cliente` (`fk_cliente`);
 
 --
 -- AUTO_INCREMENT para tabelas despejadas
@@ -101,13 +103,23 @@ ALTER TABLE `produtos`
 -- AUTO_INCREMENT de tabela `clientes`
 --
 ALTER TABLE `clientes`
-  MODIFY `id_clientes` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
+  MODIFY `id_clientes` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
 
 --
 -- AUTO_INCREMENT de tabela `produtos`
 --
 ALTER TABLE `produtos`
-  MODIFY `id_produtos` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id_produtos` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+
+--
+-- Restrições para tabelas despejadas
+--
+
+--
+-- Restrições para tabelas `produtos`
+--
+ALTER TABLE `produtos`
+  ADD CONSTRAINT `produtos_ibfk_1` FOREIGN KEY (`fk_cliente`) REFERENCES `clientes` (`id_clientes`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

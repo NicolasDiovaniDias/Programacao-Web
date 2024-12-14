@@ -1,12 +1,65 @@
 body{
-    height: auto;
+    height: calc(100% - 75px);
     width: 100%;
+    background: 
+        linear-gradient(to left, rgba(255, 0, 0, 0),#F39C12),
+        url('../imagens/banner.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-blend-mode: multiply;
 }
-article{
-    height: 100vh;
+body article{
+    height: 100%;
     width: 100%;
+    background-color: rgba(0, 0, 0, 0.500);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-main{
-    height: 100vh;
-    width: 100%;
+body article #produtos{
+    height: 35vw;
+    border-radius: 1vw;
+    width: 25vw;
+    background-color:#bdc3c700;
+    text-align: center;
+}
+body article #produtos h1{
+    color:#F39C12;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10%;
+    font-size: 4vw;
+}
+body article #produtos form{
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: space-evenly;
+}
+body article #produtos form input{
+    height: 3vw;
+    border-radius: 0.5vw;
+    width: 80%;
+    font-size: 1vw;
+}
+body article #produtos form label,body article #produtos form #arquivo{
+    color:white;
+}
+body article #produtos form input[type="submit"]{
+    width:50%;
+    height: 2.5vw;
+    border: none;
+    /* color: #1E3A3A; */
+}
+body article #produtos form input[type="submit"]:hover{
+    width:50%;
+    height: 2.5vw;
+    color: whitesmoke;
+    background-color: #1E3A3A;
+}
+#adm{
+text-decoration: none;
 }

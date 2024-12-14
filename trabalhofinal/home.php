@@ -8,7 +8,7 @@
 ?>
 <body>
     <?php
-        $query = "SELECT id_produtos ,descricao, preco_total, preco_aluguel, metros, quartos, endereco, foto_caminho FROM produtos";
+        $query = "SELECT id_produtos ,descricao, preco_total, preco_aluguel, metros, quartos, endereco, foto_caminho, fk_cliente FROM produtos WHERE fk_cliente IS NULL";
         $stmt = mysqli_prepare($conexao, $query);
         
         mysqli_stmt_execute($stmt);
@@ -18,6 +18,7 @@
         while ($row = mysqli_fetch_assoc($result)) {
             $lista[]=$row;
         }
+
         $qnt=count($lista);
         
     ?>

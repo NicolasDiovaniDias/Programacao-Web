@@ -10,6 +10,7 @@
             session_start();
             if(isset($_SESSION['id_logado']) && $_SESSION['id_logado'] != ''){
                 ?>
+                <a href="meusprodutos.php"><li>Meus Produtos</li></a>
                 <a href="_includes/_deslogar.php"><li>Deslogar</li></a>
                 <?php
             }

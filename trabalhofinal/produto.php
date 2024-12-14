@@ -31,8 +31,18 @@
             <p id="metros"><?php echo $produtos['metros'];?>²m</p>
             <p id="quartos"><?php echo $produtos['quartos'];?> quartos</p> 
             <p id="endereco"><?php echo $produtos['endereco'];?></p>
-            <button>
-            </button>
+            <?php
+                if($produtos['fk_cliente']==null){
+                    ?>
+                        <a href = "_includes/_backalugar.php?id_produto=<?php echo $id?>">Alugar</a>
+                    <?php
+                }
+                else{
+                    ?>
+                        <a href = "_includes/_backdesalugar.php?id_produto=<?php echo $id?>">Devolver</a>
+                    <?php
+                }
+            ?>
         </article>
     </main>
     <?php

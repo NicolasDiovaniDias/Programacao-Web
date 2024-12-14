@@ -1,16 +1,6 @@
 <?php
 include_once "_conexao.php";
 
-$query = "SELECT fk_cliente FROM produtos";
-
-$stmt = mysqli_prepare($conexao, $query);
-
-mysqli_stmt_execute($stmt);
-
-$result = mysqli_stmt_get_result($stmt);
-
-$row = mysqli_fetch_assoc($result);
-// print_r($row);
 for($i =0; $i<$qnt;$i++){
     if(isset($_SESSION['id_logado']) && $_SESSION['id_logado']!=''){
         ?>
@@ -43,9 +33,9 @@ for($i =0; $i<$qnt;$i++){
         echo $lista[$i]['quartos'];
         ?> quartos</p>
         
+        </div>
     </div>
-</div>
-</a>
+    </a>
 <?php
 }
 mysqli_close($conexao);

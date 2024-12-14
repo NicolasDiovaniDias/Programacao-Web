@@ -33,15 +33,20 @@ article #preco_aluguel{
 article #metros{
     font-size: 2vh;
 }
-article button{
-    width:30%;
+article a{
+    width:20%;
     font-size: large;
-    margin-left: 35%;
+    margin-left: 40%;
     height: 2.5vw;
-    border: none;
+    border: 1px solid black;
     color: #1E3A3A;
+    cursor:pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration-line: none;
 }
-article button:hover{
+article a:hover{
     transition: 0.2s;
     height: 2.5vw;
     color: whitesmoke;
