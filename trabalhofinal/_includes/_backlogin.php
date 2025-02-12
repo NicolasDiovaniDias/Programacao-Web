@@ -24,8 +24,8 @@ function login($conexao){
 
         if($row == null){
             echo "senha ou email invalidos! ";
-
-            voltar();
+            $pagina="login.php";
+            voltar($pagina);
         }
         else{
             if($senha_secreta==$row['senha']){
